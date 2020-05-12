@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c3p0-config>
+	<default-config> 
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/hotel?useSSL=false&amp;serverTimezone=UTC</property>
+		<property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+		<!-- <property name="serverTimezone">UTC</property> -->
+		<property name="user">root</property>
+		<property name="password">123123</property>
+	 
+		<!-- <property name="acquireIncrement">5</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">2</property>
+		<property name="maxPoolSize">10</property>-->  
+		
+			<property name="minPoolSize">0</property>
+			<property name="maxPoolSize">15</property> 
+			<property name="maxIdleTime">1800</property>  
+			<!-- 当连接池耗尽时候，一次获得连接数-->  
+			<property name="acquireIncrement">5</property>  
+			<property name="maxStatements">0</property>  
+			<!-- 当连接池连接耗尽时，客户端getConnection(),所等待的时间-->  
+			<property name="idleConnectionTestPeriod">120</property>  
+			<!-- 当连接失效时，获得连接的次数，0为无限次（重连）-->  
+			<property name="acquireRetryAttempts">30</property>
+		
+		
+		
+		
+	</default-config>
+</c3p0-config>
